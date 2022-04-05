@@ -1,7 +1,7 @@
 const {POST_COMMENT} = require('../types')
 
 const iState = {
-  comment: []
+  commentState: []
 }
 
 const CommentReducer = (state=iState, action) => {

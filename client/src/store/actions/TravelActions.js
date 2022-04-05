@@ -4,7 +4,7 @@ import { GetPost, PostComment } from "../../services/PostService"
 export const LoadPosts = () => {
   return async (dispatch) => {
     try {
-      const posts = await GetPosts()
+      const posts = await GetPost()
       console.log(posts)
       dispatch({
         type: GET_POST,
@@ -16,7 +16,7 @@ export const LoadPosts = () => {
 }
 }
 
-export const PostComments = () => {
+export const PostComments = (comments) => {
   return async (dispatch) => {
     try {
       const comments = await PostComments()

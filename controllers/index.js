@@ -21,7 +21,7 @@ const postComment = async (req, res) => {
 
 const getPost = async (req, res) => {
   try {
-    const posts = await Post.find({})
+    const posts = await Post.find({}).populate('comment')
     return res.status(200).json({posts})
   } catch (error) {
     return res.status(500).send(error.message);
