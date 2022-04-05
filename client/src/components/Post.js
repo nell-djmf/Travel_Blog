@@ -24,10 +24,12 @@ const Posts = (props) => {
 
   return (
     <div>
-      <p>Hello</p>
+      <h1>Travel Blog</h1>
       {props.postsState.posts.map((post) => (
         <ul key={post._id}>
           <Link to={`/:_id`}>{post.locationName}</Link>
+          <br/>
+          <img src={post.image} alt={post.location} style={{width: "300px"}}/>
           <form action="http://localhost:3001/:_id" method="POST">
             <input type="text" name="username" placeholder="Username"/>
             <input type="text" name="text" placeholder="Comment Here"/>
