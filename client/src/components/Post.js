@@ -1,7 +1,8 @@
-import {TravelActions} from '../store/actions/TravelActions'
+import {LoadPosts} from '../store/actions/TravelActions'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import React, { useEffect } from 'react'
+
 
 const mapStateToProps = ({ postsState }) => {
   return { postsState }
@@ -17,10 +18,13 @@ const Posts = (props) => {
 
   useEffect(() => {
     props.fetchPosts()
+    console.log('hi')
+    console.log("props:",props.postsState)
   },[])
 
   return (
     <div>
+      <p>Hello</p>
       {props.postsState.posts.map((post) => (
         <ul key={post._id}>
           <Link to={`/:_id`}>{post.locationName}</Link>

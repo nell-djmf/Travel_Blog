@@ -5,7 +5,7 @@ export const LoadPosts = () => {
   return async (dispatch) => {
     try {
       const posts = await GetPost()
-      console.log(posts)
+      console.log('posts')
       dispatch({
         type: GET_POST,
         payload: posts
