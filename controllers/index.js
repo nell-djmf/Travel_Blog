@@ -1,17 +1,17 @@
 const mongoose = require('mongoose')
-const { Post } = require('../models')
+const { Post, Comment } = require('../models')
 
 const postComment = async (req, res) => {
   try {
       const id = req.params._id
-      const comment = new Comm({
-          text: req.body.comment,
+      const comment = new Comment({
+          text: req.body.text,
           username: req.body.username,
           review: req.body.review,
       })
       await comment.save()
       const location = await Post.findById(id)
-          user.posts.push(comment)
+          location.comment.push(comment)
           await location.save()
       return res.status(200).json({ comment })
   } catch (error) {
