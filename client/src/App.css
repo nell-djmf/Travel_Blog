@@ -18,3 +18,53 @@ img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 15px;
 }
+
+.location-container {
+  justify-content: center;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1.2fr 0.8fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "a c"
+    "b c"; 
+  height: 325px;
+  width: 70%; 
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 10px
+
+}
+
+.location {
+  grid-area: a;
+}
+
+#new-comment {
+  grid-area: b;
+}
+
+.comment-container {
+  grid-area: c;
+}
+
+.comment-item {
+  text-align: left;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.rating {
+  width: 40px;
+}
+
+button {
+  height: 30px;
+  margin-top: 5px;
+}

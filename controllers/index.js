@@ -13,7 +13,7 @@ const postComment = async (req, res) => {
       const location = await Post.findById(id)
           location.comment.push(comment)
           await location.save()
-      return res.status(200).json({ comment })
+          return res.redirect("http://localhost:3000")
   } catch (error) {
       return res.status(500).send(error.message);
   }
