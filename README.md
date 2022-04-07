@@ -1,6 +1,8 @@
 
 # Travel Blog
 
+A group project by Eric Lantz, Austin Haubenschild, Michelle Yang, and me!
+
 ![homepage](https://i.imgur.com/WpOWnGh.png)
 
 
