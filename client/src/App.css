@@ -1,3 +1,8 @@
+body {
+  background-image: url('https://cdn.wallpapersafari.com/71/41/9asMHf.png');
+  background-size: cover;
+}
+
 .App {
   text-align: center;
   margin: 0;
@@ -20,6 +25,7 @@ img {
 }
 
 .location-container {
+  background-color: darkslategrey;
   justify-content: center;
   display: grid; 
   grid-auto-columns: 1fr; 
@@ -33,9 +39,14 @@ img {
   width: 70%; 
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 10px
+  padding: 10px;
+  background-image: url('https://i.pinimg.com/736x/53/27/62/53276295bab833e8f88d710edfb3cb9e.jpg');
+  background-size: cover;
+  padding: 1em;
+	border: 16px solid transparent;
+	border-image: 16 repeating-linear-gradient(-45deg, #c44350 0, #c44350 1em, transparent 0, transparent 2em,
+	              #58a 0, #58a 3em, transparent 0, transparent 4em);
+	
 
 }
 
@@ -58,6 +69,11 @@ img {
 input {
   height: 30px;
   border-radius: 5px;
+  background-color: transparent;
+}
+
+.user {
+  width: 100px;
 }
 
 .rating {
@@ -67,4 +83,7 @@ input {
 button {
   height: 30px;
   margin-top: 5px;
+  border-radius: 5px;
+  background-color: transparent;
 }
+
