@@ -24,7 +24,6 @@ const Posts = (props) => {
 
   useEffect(() => {
     props.fetchPosts()
-    isClicked(false)
   },[clicked])
 
   useEffect(() => {
