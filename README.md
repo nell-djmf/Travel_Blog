@@ -3,14 +3,18 @@
 
 A group project by Eric Lantz, Austin Haubenschild, Michelle Yang, and me!
 
-![homepage](https://i.imgur.com/WpOWnGh.png)
+![homepage](https://i.imgur.com/fgkxuME.png)
 
 
 ## Features
 - Comment on your favorite locations
 - Toggle image or information view for each city
 - Scrollable info & comment section
+***
 
+## Known Bugs
+
+> Submitting a comment without filling out all the fields will cause errors.
 
 ***
 ## Credits

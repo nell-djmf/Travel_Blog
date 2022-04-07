@@ -29,10 +29,12 @@ const Posts = (props) => {
 
   useEffect(() => {
     props.fetchPosts()
+    isClicked(false)
   },[clicked])
 
   //On form submit, the form targets an invisible frame to avoid a redirect
-  //I had to use two useEffects, still unsure why but the comment section only updated when I clicked a second time (without refreshing). I think it's because (according to Mongoose), the axios call for a rerender is made before the post. Unsure how to get around this, I only needed a single useEffect to get updates on state change in project 2.
+  //I had to use two useEffects, still unsure why but the comment section only updated when I clicked a second time (without refreshing).
+  //I think it's because the axios call for a rerender is made before the post. Unsure how to get around this, I only needed a single useEffect to get updates on state change in project 2. 
   //I probably should have used Redux to make a new state, but I stayed up too late and couldn't figure it out
 
   return (
