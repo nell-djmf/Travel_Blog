@@ -1,22 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Dekko&family=Permanent+Marker&display=swap');
+
+
 body {
-  background-image: url('https://cdn.wallpapersafari.com/71/41/9asMHf.png');
+  background-image: url('https://i.imgur.com/nW6voXx.png');
   background-size: cover;
 }
 
 .App {
   text-align: center;
+  font-family: 'Dekko', cursive;
+}
+
+h2 {
   margin: 0;
   padding: 0;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h3 {
-  margin: 0;
-  padding: 0;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h1 {
+  font-size: 50px;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
 }
+
+p {
+  font-size: 18px;
+}
+
 img {
   margin-top: -8px;
   margin-bottom: 10px;
@@ -34,13 +48,13 @@ img {
   gap: 0px 0px; 
   grid-template-areas: 
     "a c"
-    "b c"; 
+    "b c";
   height: 325px;
   width: 70%; 
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background-image: url('https://i.pinimg.com/736x/53/27/62/53276295bab833e8f88d710edfb3cb9e.jpg');
+  background-image: url('https://i.imgur.com/oylevbg.jpg');
   background-size: cover;
   padding: 1em;
 	border: 16px solid transparent;
@@ -62,6 +76,10 @@ img {
   grid-area: c;
 }
 
+.info {
+  margin-bottom: 5px;
+}
+
 .comment-item {
   text-align: left;
 }
@@ -70,6 +88,8 @@ input {
   height: 30px;
   border-radius: 5px;
   background-color: transparent;
+  font-family: 'Dekko', cursive;
+  font-size: 16px;
 }
 
 .user {
@@ -85,5 +105,14 @@ button {
   margin-top: 5px;
   border-radius: 5px;
   background-color: transparent;
+  font-family: 'Dekko', cursive;
+  font-size: 16px;
+}
+
+
+.toggle {
+  margin-top: 0;
+  width: 100px;
+  background-color: grey;
 }
 

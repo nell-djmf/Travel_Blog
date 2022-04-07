@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const Posts = (props) => {
 
+  const [popup, showPopup] = useState(false)
   const [clicked, isClicked] = useState(false)
 
   useEffect(() => {
@@ -30,17 +31,36 @@ const Posts = (props) => {
     props.fetchPosts()
   },[clicked])
 
-
+  //On form submit, the form targets an invisible frame to avoid a redirect
+  //I had to use two useEffects, still unsure why but the comment section only updated when I clicked a second time (without refreshing). I think it's because (according to Mongoose), the axios call for a rerender is made before the post. Unsure how to get around this, I only needed a single useEffect to get updates on state change in project 2.
+  //I probably should have used Redux to make a new state, but I stayed up too late and couldn't figure it out
 
   return (
     <div className='wrapper'>
       <h1>Travel Blog</h1>
+      <button className='toggle' onClick={()=>showPopup(false)}>Picture</button>
+      <button className='toggle' onClick={()=>showPopup(true)}>Info</button>
         {props.postsState.posts && props.postsState.posts.map((post) => (
           <ul key={post._id} className='location-container'>
             <div className='location'>
-              <h3>{post.locationName}</h3>
+              <h2 className='location-name' >{post.locationName}</h2>
               <br/>
-              <img className='location-image' src={post.image} alt={post.location} style={{width: "300px"}}/>
+              {
+              popup ? (
+                <div className='info-container'>
+                    <div onClick={()=>showPopup(false)} style={{
+                    maxHeight: "200px",
+                    overflowY: "scroll"
+                    }} className='info'>
+                      {post.description}
+                  </div>
+                  </div>
+              ) : (
+                <div>
+                  <img className='location-image' src={post.image} alt={post.location} style={{width: "300px", maxHeight: "180px"}}/>
+                </div>
+              )
+              }
               <form onSubmit={()=>isClicked(true)} target="ifrm1" id="new-comment" action={`http://localhost:3001/api/${post._id}`} method="POST">
                 <input className='user' type="text" name="username" placeholder="Username"/>
                 <input type="text" name="text" placeholder="Comment Here"/>
