@@ -39,7 +39,6 @@ img {
 }
 
 .location-container {
-  background-color: darkslategrey;
   justify-content: center;
   display: grid; 
   grid-auto-columns: 1fr; 
@@ -58,8 +57,7 @@ img {
   background-size: cover;
   padding: 1em;
 	border: 16px solid transparent;
-	border-image: 16 repeating-linear-gradient(-45deg, #c44350 0, #c44350 1em, transparent 0, transparent 2em,
-	              #58a 0, #58a 3em, transparent 0, transparent 4em);
+	border-image: 16 repeating-linear-gradient(-45deg, #c44350 0, #c44350 1em, transparent 0, transparent 2em, #58a 0, #58a 3em, transparent 0, transparent 4em);
 	
 
 }
@@ -108,7 +106,6 @@ button {
   font-family: 'Dekko', cursive;
   font-size: 16px;
 }
-
 
 .toggle {
   margin-top: 0;
