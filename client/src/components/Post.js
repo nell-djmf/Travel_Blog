@@ -48,7 +48,7 @@ const Posts = (props) => {
               {
               popup ? (
                 <div className='info-container'>
-                    <div onClick={()=>showPopup(false)} style={{
+                    <div style={{
                     maxHeight: "200px",
                     overflowY: "scroll"
                     }} className='info'>
