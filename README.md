@@ -16,7 +16,7 @@ A group project by Eric Lantz, Austin Haubenschild, Michelle Yang, and me!
 ## Credits
 
 
-[Form submit without redirect](https://stackoverflow.com/questions/51428271/submitting-form-without-opening-new-window-or-tab)
+[Form submit without redirect](https://stackoverflow.com/questions/27136349/submitting-an-html-form-without-opening-a-new-window)
 
 [Airmail Border](https://codepen.io/danichk/pen/KdorYJ)
 
